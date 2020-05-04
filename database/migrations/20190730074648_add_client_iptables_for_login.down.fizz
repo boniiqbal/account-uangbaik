@@ -1,0 +1,2 @@
+drop_column("access_tokens", "client_ip")
+drop_column("admin_access_tokens", "client_ip")

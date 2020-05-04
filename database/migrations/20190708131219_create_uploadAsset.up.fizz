@@ -1,0 +1,14 @@
+create_table("upload_assets") {
+	t.Column("id", "integer", {primary: true})
+  t.Column("upload_id", "integer", {"null":true})
+  t.Column("upload_type", "string", {"size": 255, "null":true})
+	t.Column("path", "string", {"size": 255, "null":true})
+	t.Column("file_name", "string", {"size": 255, "null":true})
+	t.Column("url", "string", {"size": 255, "null":true})
+	t.Column("mime_type", "string", {"size": 255, "null":true})
+	t.Column("type", "string", {"size": 255, "null":true})
+	t.Column("is_verified", "integer", {"default": 0})
+	t.Column("status", "integer", {"default": 1})
+	t.Timestamps()
+  t.Column("deleted_at", "timestamp", {"null":true})
+}

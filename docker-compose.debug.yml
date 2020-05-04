@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  account-microservice:
+    image: account-microservice
+    build:
+      context: .
+      dockerfile: Dockerfile

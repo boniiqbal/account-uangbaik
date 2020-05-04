@@ -1,0 +1,11 @@
+create_table("bank_accounts") {
+	t.Column("id", "integer", {primary: true})
+	t.Column("actor_id", "integer")
+	t.Column("actor_type", "string", {"size": 45})
+	t.Column("bank_name", "string", {"size": 255})
+  t.Column("bank_branch", "string", {"size": 255, "null":true})
+  t.Column("account_number", "string", {"size": 255})
+  t.Column("status", "integer", {"default": 1})
+	t.Timestamps()
+  t.Column("deleted_at", "timestamp", {"null":true})
+}

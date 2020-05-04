@@ -1,0 +1,16 @@
+development:
+  dialect: mysql
+  database: {{env "DEV_DB_NAME"}}
+  user: {{env "DEV_DB_USER"}}
+  password: {{env "DEV_DB_PASS"}}
+  host: {{env "DEV_DB_HOST"}}
+
+# test:
+#   url: {{envOr "TEST_DATABASE_URL" "postgres://postgres:postgres@127.0.0.1:5432/uangbaik-backend_test?sslmode=disable"}}
+
+production:
+  dialect: mysql
+  database: {{env "PROD_DB_NAME"}}
+  user: {{env "PROD_DB_USER"}}
+  password: {{env "PROD_DB_PASS"}}
+  host: {{env "PROD_DB_HOST"}}

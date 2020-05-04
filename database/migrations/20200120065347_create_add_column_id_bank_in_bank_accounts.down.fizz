@@ -1,0 +1,1 @@
+drop_column("banks", "bank_id")

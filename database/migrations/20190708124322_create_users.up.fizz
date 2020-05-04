@@ -1,0 +1,18 @@
+create_table("users") {
+	t.Column("id", "integer", {primary: true})
+	t.Column("full_name", "string", {"size": 255, "null":true})
+	t.Column("phone", "string", {"size": 45})
+	t.Column("email", "string", {"size": 255, "null":true})
+	t.Column("address", "string", {"size": 255, "null":true})
+	t.Column("pin", "string", {"size": 255, "null":true})
+	t.Column("password", "string", {"size": 255, "null":true})
+  t.Column("hash", "string", {"size": 255, "null":true})
+  t.Column("last_login", "datetime", {"null":true})
+  t.Column("status", "integer", {"default": 0, "null":true})
+  t.Column("is_phone_verified", "integer", {"default": 0, "null":true})
+  t.Column("is_email_verified", "integer", {"default": 0, "null":true})
+	t.Timestamps()
+  t.Column("deleted_at", "timestamp", {"null":true})
+}
+
+add_index("users", "phone", {"unique": true})

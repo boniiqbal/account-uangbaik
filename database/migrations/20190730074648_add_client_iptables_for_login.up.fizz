@@ -1,0 +1,2 @@
+add_column("access_tokens", "client_ip", "string", {"size": 255, "after": "user_agent", "null": true})
+add_column("admin_access_tokens", "client_ip", "string", {"size": 255, "after": "user_agent", "null": true})

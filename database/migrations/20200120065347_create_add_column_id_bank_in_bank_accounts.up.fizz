@@ -1,0 +1,1 @@
+add_column("bank_accounts", "bank_id", "int", {"after": "actor_type", "size": 45})

@@ -1,0 +1,12 @@
+create_table("admin_access_tokens") {
+	t.Column("id", "integer", {primary: true})
+	t.Column("admin_id", "integer")
+	t.Column("access_token", "string", {"size": 255})
+	t.Column("token_type", "string")
+  t.Column("scope", "string", {"size": 45})
+  t.Column("refresh_token", "string", {"size": 255})
+  t.Column("user_agent", "string")
+  t.Column("expires_at", "bigint")
+	t.Timestamps()
+  t.Column("deleted_at", "timestamp", {"null":true})
+}
